@@ -7,16 +7,12 @@ public class LexicalTwistPuzzle {
         String word1 = sc.nextLine();
         String word2 = sc.nextLine();
 
-        if (word1.contains(" ")) {
-            System.out.println(word1 + " is an invalid word");
-            return;
-        }
+        String reversed = new StringBuilder(word1).reverse().toString();
 
-        if (word2.contains(" ")) {
-            System.out.println(word2 + " is an invalid word");
-            return;
+        if (reversed.equalsIgnoreCase(word2)) {
+            System.out.println("Words are reverse");
+        } else {
+            System.out.println("Not reverse");
         }
-
-        System.out.println("Valid Inputs");
     }
 }
