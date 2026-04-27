@@ -10,7 +10,19 @@ public class LexicalTwistPuzzle {
         String reversed = new StringBuilder(word1).reverse().toString();
 
         if (reversed.equalsIgnoreCase(word2)) {
-            System.out.println("Words are reverse");
+            String lower = reversed.toLowerCase();
+            String result = "";
+
+            for (int i = 0; i < lower.length(); i++) {
+                char c = lower.charAt(i);
+                if ("aeiou".indexOf(c) != -1) {
+                    result += "@";
+                } else {
+                    result += c;
+                }
+            }
+
+            System.out.println(result);
         } else {
             System.out.println("Not reverse");
         }
