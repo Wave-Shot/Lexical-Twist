@@ -9,22 +9,24 @@ public class LexicalTwistPuzzle {
 
         String reversed = new StringBuilder(word1).reverse().toString();
 
-        if (reversed.equalsIgnoreCase(word2)) {
-            String lower = reversed.toLowerCase();
-            String result = "";
+        if (!reversed.equalsIgnoreCase(word2)) {
+            String combined = (word1 + word2).toUpperCase();
 
-            for (int i = 0; i < lower.length(); i++) {
-                char c = lower.charAt(i);
-                if ("aeiou".indexOf(c) != -1) {
-                    result += "@";
-                } else {
-                    result += c;
+            int vowels = 0;
+            int consonants = 0;
+
+            for (int i = 0; i < combined.length(); i++) {
+                char c = combined.charAt(i);
+
+                if ("AEIOU".indexOf(c) != -1) {
+                    vowels++;
+                } else if (Character.isLetter(c)) {
+                    consonants++;
                 }
             }
 
-            System.out.println(result);
-        } else {
-            System.out.println("Not reverse");
+            System.out.println("Vowels: " + vowels);
+            System.out.println("Consonants: " + consonants);
         }
     }
 }
