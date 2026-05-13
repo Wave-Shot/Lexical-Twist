@@ -1,4 +1,4 @@
-🧩 Lexical Twist Puzzle
+## 🧩 Lexical Twist Puzzle
 📌 Overview
 Lexical Twist Puzzle is a Java-based interactive word puzzle system designed to improve vocabulary, logical reasoning, and pattern recognition skills.
 The system challenges users with lexical transformations such as word rearrangement, pattern matching, and letter-based logic puzzles.
